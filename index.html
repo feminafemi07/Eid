@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eid ul Adha Wishes</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Naskh+Arabic:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      min-height:100vh;
+      overflow:hidden;
+      background:linear-gradient(to bottom,#081420,#102a43,#16324f);
+      color:white;
+      position:relative;
+    }
+
+    /* Stars */
+
+    .stars span{
+      position:absolute;
+      width:3px;
+      height:3px;
+      background:white;
+      border-radius:50%;
+      animation:twinkle 3s infinite ease-in-out;
+    }
+
+    @keyframes twinkle{
+      0%,100%{
+        opacity:.2;
+        transform:scale(.8);
+      }
+      50%{
+        opacity:1;
+        transform:scale(1.6);
+      }
+    }
+
+    /* Floating Moon */
+
+    .moon{
+      width:120px;
+      height:120px;
+      background:#ffe08a;
+      border-radius:50%;
+      position:absolute;
+      top:70px;
+      right:120px;
+      box-shadow:0 0 45px rgba(255,224,138,.8);
+      animation:floatMoon 5s ease-in-out infinite;
+      z-index:2;
+    }
+
+    .moon::after{
+      content:'';
+      position:absolute;
+      width:100px;
+      height:100px;
+      background:#102a43;
+      border-radius:50%;
+      left:28px;
+      top:0;
+    }
+
+    @keyframes floatMoon{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-15px);
+      }
+    }
+
+    /* Flying Lanterns */
+
+    .lantern{
+      position:absolute;
+      bottom:-120px;
+      width:22px;
+      height:35px;
+      background:#ffd369;
+      border-radius:8px;
+      box-shadow:0 0 20px #ffd369;
+      animation:fly 12s linear infinite;
+      opacity:.75;
+      z-index:2;
+    }
+
+    .lantern::before{
+      content:'';
+      position:absolute;
+      width:10px;
+      height:10px;
+      border:2px solid #ffd369;
+      border-bottom:none;
+      border-radius:10px 10px 0 0;
+      top:-8px;
+      left:4px;
+    }
+
+    @keyframes fly{
+
+      0%{
+        transform:translateY(0);
+        opacity:0;
+      }
+
+      10%{
+        opacity:.8;
+      }
+
+      100%{
+        transform:translateY(-120vh);
+        opacity:0;
+      }
+
+    }
+
+    /* Mosque Skyline */
+
+    .mosque{
+      position:absolute;
+      bottom:0;
+      width:100%;
+      height:180px;
+      background:#081018;
+      z-index:1;
+    }
+
+    .dome{
+      position:absolute;
+      bottom:0;
+      background:#0d1722;
+      border-radius:50% 50% 0 0;
+    }
+
+    .dome.big{
+      width:260px;
+      height:140px;
+      left:50%;
+      transform:translateX(-50%);
+    }
+
+    .dome.small{
+      width:140px;
+      height:90px;
+    }
+
+    .dome.small.left{
+      left:28%;
+    }
+
+    .dome.small.right{
+      right:28%;
+    }
+
+    .minaret{
+      position:absolute;
+      bottom:0;
+      width:45px;
+      height:220px;
+      background:#0d1722;
+    }
+
+    .minaret::before{
+      content:'';
+      position:absolute;
+      top:-25px;
+      left:2px;
+      width:40px;
+      height:40px;
+      background:#0d1722;
+      border-radius:50%;
+    }
+
+    .minaret.left{
+      left:18%;
+    }
+
+    .minaret.right{
+      right:18%;
+    }
+
+    /* Main Container */
+
+    .container{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:20px;
+      position:relative;
+      z-index:3;
+    }
+
+    .card{
+      width:100%;
+      max-width:760px;
+      background:rgba(255,255,255,0.08);
+      backdrop-filter:blur(15px);
+      border-radius:35px;
+      border:1px solid rgba(255,255,255,0.12);
+      padding:50px;
+      text-align:center;
+      box-shadow:0 10px 40px rgba(0,0,0,.4);
+    }
+
+    .arabic{
+      font-family:'Noto Naskh Arabic',serif;
+      font-size:3rem;
+      color:#ffe08a;
+      margin-bottom:15px;
+    }
+
+    h1{
+      font-size:3.5rem;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:#d8e7ff;
+      font-size:1.1rem;
+      margin-bottom:30px;
+    }
+
+    .message{
+      line-height:1.9;
+      color:#f2f2f2;
+      font-size:1.05rem;
+    }
+
+    .input-box{
+      margin-top:35px;
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+
+    input{
+      flex:1;
+      min-width:250px;
+      padding:16px;
+      border:none;
+      outline:none;
+      border-radius:15px;
+      background:rgba(255,255,255,0.1);
+      border:1px solid rgba(255,255,255,0.08);
+      color:white;
+      font-size:1rem;
+    }
+
+    input::placeholder{
+      color:#ddd;
+    }
+
+    button{
+      padding:16px 28px;
+      border:none;
+      border-radius:15px;
+      background:linear-gradient(135deg,#ffd369,#ffb703);
+      color:#222;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:.3s;
+    }
+
+    button:hover{
+      transform:translateY(-3px) scale(1.03);
+      box-shadow:0 10px 20px rgba(255,211,105,.3);
+    }
+
+    .generated{
+      margin-top:35px;
+      font-size:1.3rem;
+      font-weight:600;
+      color:#fff;
+      min-height:40px;
+    }
+
+    .footer{
+      margin-top:40px;
+      font-size:.9rem;
+      opacity:.8;
+      color:#ddd;
+    }
+
+    @media(max-width:700px){
+
+      body{
+        overflow:auto;
+      }
+
+      .moon{
+        width:90px;
+        height:90px;
+        right:30px;
+        top:40px;
+      }
+
+      .moon::after{
+        width:75px;
+        height:75px;
+      }
+
+      .card{
+        padding:35px 22px;
+      }
+
+      .arabic{
+        font-size:2.2rem;
+      }
+
+      h1{
+        font-size:2.5rem;
+      }
+
+      .input-box{
+        flex-direction:column;
+      }
+
+      button{
+        width:100%;
+      }
+
+      .mosque{
+        height:140px;
+      }
+
+      .dome.big{
+        width:180px;
+        height:100px;
+      }
+
+      .dome.small{
+        width:90px;
+        height:55px;
+      }
+
+      .minaret{
+        width:30px;
+        height:160px;
+      }
+
+      .minaret::before{
+        width:28px;
+        height:28px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Stars -->
+
+  <div class="stars">
+    <span style="top:10%; left:20%;"></span>
+    <span style="top:20%; left:80%;"></span>
+    <span style="top:35%; left:60%;"></span>
+    <span style="top:70%; left:15%;"></span>
+    <span style="top:85%; left:75%;"></span>
+    <span style="top:15%; left:45%;"></span>
+    <span style="top:55%; left:90%;"></span>
+  </div>
+
+  <!-- Moon -->
+
+  <div class="moon"></div>
+
+  <!-- Flying Lanterns -->
+
+  <div class="lantern" style="left:10%; animation-delay:0s;"></div>
+
+  <div class="lantern" style="left:30%; animation-delay:3s;"></div>
+
+  <div class="lantern" style="left:70%; animation-delay:6s;"></div>
+
+  <div class="lantern" style="left:90%; animation-delay:2s;"></div>
+
+  <!-- Mosque -->
+
+  <div class="mosque">
+
+    <div class="dome big"></div>
+
+    <div class="dome small left"></div>
+
+    <div class="dome small right"></div>
+
+    <div class="minaret left"></div>
+
+    <div class="minaret right"></div>
+
+  </div>
+
+  <!-- Main Card -->
+
+  <div class="container">
+
+    <div class="card">
+
+      <div class="arabic">
+        عيد مبارك
+      </div>
+
+      <h1>Eid Mubarak</h1>
+
+      <p class="subtitle">
+        May Allah Fill Your Life With Peace & Happiness 🌙
+      </p>
+
+      <p class="message">
+        Celebrate this blessed occasion with gratitude,
+        love, and togetherness. May your heart be filled
+        with joy, your home with warmth, and your future
+        with endless blessings.
+      </p>
+
+      <div class="input-box">
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Enter your name..."
+        >
+
+        <button onclick="generateWish()">
+          Generate Wish ✨
+        </button>
+
+      </div>
+
+      <div class="generated" id="wishBox"></div>
+
+      <div class="footer">
+        🌙 Eid ul Adha Wishes by Femina!!✨🤍
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    function generateWish(){
+
+      let name =
+      document.getElementById("name").value;
+
+      let wishBox =
+      document.getElementById("wishBox");
+
+      if(name.trim() === ""){
+
+        wishBox.innerHTML =
+        "✨ Eid Mubarak To You & Your Family ✨";
+
+      } else {
+
+        wishBox.innerHTML =
+        "🌙 Eid Mubarak, " +
+        name +
+        "! May Allah bless you with happiness and success ✨";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+  </html>
