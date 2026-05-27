@@ -359,6 +359,119 @@
       }
 
     }
+    /* MOBILE FIXES */
+
+html, body{
+  width:100%;
+  overflow-x:hidden;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+/* Responsive card */
+
+.card{
+  width:100%;
+  max-width:760px;
+}
+
+/* Better mobile layout */
+
+@media(max-width:700px){
+
+  body{
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+
+  .container{
+    padding:15px;
+    align-items:flex-start;
+    padding-top:100px;
+    padding-bottom:220px;
+  }
+
+  .card{
+    padding:30px 18px;
+    border-radius:25px;
+  }
+
+  h1{
+    font-size:2.2rem;
+  }
+
+  .arabic{
+    font-size:2rem;
+  }
+
+  .subtitle{
+    font-size:1rem;
+  }
+
+  .message{
+    font-size:.95rem;
+    line-height:1.7;
+  }
+
+  /* Moon */
+
+  .moon{
+    width:80px;
+    height:80px;
+    right:20px;
+    top:30px;
+  }
+
+  .moon::after{
+    width:65px;
+    height:65px;
+  }
+
+  /* Mosque */
+
+  .mosque{
+    height:120px;
+  }
+
+  .dome.big{
+    width:150px;
+    height:80px;
+  }
+
+  .dome.small{
+    width:70px;
+    height:40px;
+  }
+
+  .minaret{
+    width:22px;
+    height:120px;
+  }
+
+  .minaret::before{
+    width:20px;
+    height:20px;
+  }
+
+  /* Inputs */
+
+  .input-box{
+    flex-direction:column;
+  }
+
+  input, button{
+    width:100%;
+  }
+
+  /* Lanterns */
+
+  .lantern{
+    transform:scale(.8);
+  }
+
+}
 
   </style>
 </head>
